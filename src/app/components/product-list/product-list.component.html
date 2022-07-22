@@ -1,0 +1,13 @@
+<!--adding go to cart button in case navigation isnt working-->
+<a routerLink='/cart' routerLinkActive="active"><button>go to cart</button></a>
+<div class='productcontainer'>
+<!-- calling the product items to be seen over prroduct page
+    ussing one way bindung data -->
+    <app-product-items  class="productindex"
+     *ngFor="let product of productItem"
+    [productItem]="product"></app-product-items>
+
+    
+</div>
+    
+   
