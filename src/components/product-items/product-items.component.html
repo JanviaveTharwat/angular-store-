@@ -1,0 +1,25 @@
+<div class='productcontainer'>
+  <!--getting product by its id-->
+    <a routerLink='/product-detail/{{productItem.id}}'
+    routerLinkActive='active'>
+    <!--adding its image by featching its data-->
+    
+    <img  class='productimage' 
+    src="{{productItem.url}}"
+    alt="{{productItem.name}}">
+  </a>
+ <div class="detailitem">
+  <!--adding product details by fetching its data -->
+  <li><h2>name:{{productItem.name}}</h2></li>
+  <li>price: {{productItem.price}} $</li> 
+  <!--to get more details about this product we linked the product details page
+     by this product id in a button (more details) 
+  -->
+  <a routerLink='/product-detail/{{productItem.id}}'
+  routerLinkActive='active'>
+  <button>more details</button>
+</a>
+</div>
+<!--calling order list to fech data and send to it-->
+<app-order-list [product]="productItem"></app-order-list>
+</div>

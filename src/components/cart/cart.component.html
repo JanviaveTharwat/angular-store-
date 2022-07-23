@@ -1,0 +1,41 @@
+<!--back to product list button in case navigation(nav bar) isnt working-->
+
+<a routerLink="/"routerLinkActive="active">
+    <button>back to products</button></a>
+    <!--message in case this cart is empty-->
+<div class="empty-cart-message" *ngIf="item.products.length===0">
+    No items here please add item go back to  
+    <a routerLink="/" routerLinkActive="active">
+        product list </a> and add some
+     </div>
+ <!--cart has products -->       
+<div class="cart-container">Cart</div>
+<!--cart products list-->
+<div class="cart-item" *ngFor="let product of item.products">
+    <!--loading image and details of each product -->
+    <img src="{{product.url}}"
+    alt="{{product.name}}"><div>
+<ul class="cart-item-details ">
+name:{{product.name}}
+<br>
+ price:{{(product.price).toFixed(1)}} $
+ <br>
+ <!--user add product quantity-->
+<label for="cart-{{product.name}}">Quantity</label>
+<input 
+class='number-input 'type="number" min='1' id='cart-{{product.name}}'
+[(ngModel)]="product.quantity"(ngModelChange)="changeQuantity(product.id,$event)">
+
+<!--buttion to remove product-->
+ <button (click)="removeProduct(product.id)">Remove this</button> 
+           
+</ul>
+
+<!--calculating total price-->
+<h3>Total :{{(item.totalPrice).toFixed(1)}} $</h3>
+
+</div>
+
+</div>
+<!-- getting form -->
+<app-from  class='form-margin' (submitOrder)="createOrder($event)"></app-from>
