@@ -1,0 +1,32 @@
+.header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+
+  }
+  .title{
+    font-size:large;
+  }
+  
+  a {
+    color: #ffffff;
+    margin:2px 50px;
+    font-size: medium;
+  }
+  a:hover{
+    background-color:indigo;
+    color:lavenderblush;
+    text-decoration: underline;
+  }
+  .nav{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+  }
+  ul{
+    list-style-type: none;
+  }
+  li{
+    list-style-type: none;
+  }

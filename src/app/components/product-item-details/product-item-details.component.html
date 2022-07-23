@@ -1,0 +1,24 @@
+<!--adding go to cart button in case navigation isnt working-->
+<a routerLink='/cart' routerLinkActive="active"><button>go to cart</button></a>
+<div class="detail-container" >
+    <!--adding image  an details of every product
+         by using {{}}and mentioning proudct and fetching fromdata.jaon 
+         and filtering it from product module-->
+    <img src="{{product?.url}}"
+    alt="{{product?.name}}">
+    <span class="detail-item">
+        <ul>
+            <li>name:<h3>{{product?.name}}</h3></li>
+            <li>description:{{product?.description}}
+            </li>
+            <li>price:{{product?.price}} $</li>
+        </ul>
+        
+    </span>
+
+    <!--adding back button to go back to product list(main page)-->
+    <a routerLink="/" routerLinkActive="active">
+        <button class="back-link"> go back</button>
+    </a>
+    </div>
+    

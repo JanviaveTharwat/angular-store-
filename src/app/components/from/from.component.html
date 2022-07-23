@@ -1,0 +1,61 @@
+<form  #f="ngForm"  
+(ngSubmit)="submit()">
+    <h1> Checkout </h1>
+    <label for="fullName">Full Name: </label>
+    <input 
+    id='fullName'
+    type='text'
+    name="fullName"  
+    required 
+    minlength="9" 
+    placeholder="Enter First Name" 
+    [(ngModel)]="fullName">
+    <br>
+
+    
+    <label for='email'>email</label>
+    <input 
+    id="emai"
+    name="email" 
+    type='text' 
+    required 
+    placeholder ='example@email.com' 
+    [(ngModel)]="email">
+    <br>
+
+    <label for="number">Number:</label>
+    <input 
+    id="number" 
+    type='number'
+    name="number" 
+    requierd 
+    placeholder="01234****" 
+    minlebght='7'
+     maxlenght="11"
+     [(ngModel)]="number">
+     <br>
+
+    <label for="adress">Address: </label>
+    <input 
+    id='adress' 
+    type='text'
+    name="adress"  
+    required  
+    minlength="10" 
+    placeholder="Enter Address" 
+    [(ngModel)]="adress">
+    <br>
+    <label for='creditcard'>Credit Card : </label>
+    <input 
+    id='cerditcard'
+    type='text'
+    name="cerditcard"  
+    required 
+    minlength="16"
+    maxlength="16" 
+    placeholder="(16-digit number)" 
+    [(ngModel)]="creditcard">
+    <br>
+   
+    <button type='submit'[disabled]="f.invalid"  value="Submit" > submit </button>
+  </form>

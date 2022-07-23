@@ -1,0 +1,36 @@
+img {
+    border-radius: 10px;
+    width: 320px;
+  }
+  
+  .select-input {
+    width: 108px; 
+    margin-bottom: 8px;
+  }
+  
+  .detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+  }
+  
+  .detail-item {
+    list-style-type: none;
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  ul li{
+    list-style-type: none;
+    background-color: #cce5ff;
+    color:darkblue;
+    margin: 5px;
+  }
+  ul{
+    background: #3399ff;
+    padding:20px;
+  }
+  
+  .back-link {
+    margin-top: 8px;
+  }
