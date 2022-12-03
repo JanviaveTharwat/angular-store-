@@ -1,7 +1,5 @@
 # angular-store-
-
 this project is for udacity cross skill nanodgree bulding application by angular
-
 this application build the front end  of an e commerce store. all data are fetched bt http and get requist from a file 
 what you will see is a list of product with amge ,name, price and some buttons to let you navigate btween product page and product details
 also there cart page where you wil find all your order and a form to complete to get your order
